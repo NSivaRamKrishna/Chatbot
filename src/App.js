@@ -4,6 +4,7 @@ import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import CircularProgress from "@mui/material/CircularProgress";
 import gemini from './assests/gemini.jpg'
 import user from './assests/user.jpg'
+import Markdown from 'react-markdown'
 
 function App() {
   const [newtext, setNewtext] = useState("");
@@ -51,8 +52,8 @@ function App() {
               <img src={gemini} width={20} height={20} alt="Gemini Icon" className=" md:block mr-2" />
               <div className="pl-1 font-bold">Gemini:</div>
             </div>
-            <div className="w-full md:w-fit bg-gray-300 rounded p-2 my-2 md:ml-0">
-              {item.response}
+            <div className="w-fit md:w-fit bg-gray-300 rounded p-2 my-2 md:ml-0">
+              <Markdown>{item.response}</Markdown>
             </div>
           </div>
         ))}
